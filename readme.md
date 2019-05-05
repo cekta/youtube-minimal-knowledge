@@ -25,3 +25,9 @@
 * CSS
 * JS
 * CORS
+* Континиен интегретион
+* Тестировнаие
+* Различные форматы результата сборки (tar.gz, deb, rpm, docker image, ...)
+* Сохранение результатов (ftp, sftp, docker registry, ...)
+* docker multi stage
+* docker registry
