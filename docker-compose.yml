@@ -5,5 +5,7 @@ services:
       context: api
     volumes:
       - ./api:/app
+    environment:
+      - XDEBUG_CONFIG=idekey=api remote_enable=1 remote_host=${DOCKER_HOST_IP}
     ports:
       - 80:8000
