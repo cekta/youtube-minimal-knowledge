@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  web:
+    image: cekta/youtube-minimal-knowledge:web
+    restart: always
+    ports:
+      - 80:80
+  api:
+    image: cekta/youtube-minimal-knowledge:api
+    restart: always
