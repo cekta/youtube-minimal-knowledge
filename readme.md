@@ -1,3 +1,7 @@
+Запуск проекта:
+1. Требуется docker и docker-compose
+2. docker-compose up -d
+
 Знания которые могут понадобится:
 * Текстовый редактор
 * PHP (php.net)
@@ -8,3 +12,5 @@
 * Методология (kanban)
 * ssh
 * code review
+* docker
+* docker-compose
