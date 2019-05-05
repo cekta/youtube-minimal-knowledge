@@ -16,3 +16,12 @@
 * docker-compose
 * xdebug
 * XDEBUG_CONFIG
+* Пакетный менджмент
+* Пакетный менеджер yarn или npm
+* yarn create
+* REACT
+* create react app template
+* HTML
+* CSS
+* JS
+* CORS
