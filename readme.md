@@ -14,3 +14,5 @@
 * code review
 * docker
 * docker-compose
+* xdebug
+* XDEBUG_CONFIG
