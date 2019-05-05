@@ -7,3 +7,4 @@
 * Таск треккер (github issue)
 * Методология (kanban)
 * ssh
+* code review
