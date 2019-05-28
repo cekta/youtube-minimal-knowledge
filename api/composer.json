@@ -16,6 +16,7 @@
   "require": {
     "zendframework/zend-diactoros": "^2.1",
     "ext-json": "*",
-    "zendframework/zend-httphandlerrunner": "^1.1"
+    "zendframework/zend-httphandlerrunner": "^1.1",
+    "smpl/mydi": "^5.0"
   }
 }
