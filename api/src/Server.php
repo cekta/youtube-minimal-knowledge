@@ -5,25 +5,29 @@ namespace Cekta\YoutubeMinimalKnowledge;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response\JsonResponse;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class Server
+class Server implements RequestHandlerInterface
 {
+    /**
+     * @var RouterInterface
+     */
+    private $router;
+    /**
+     * @var HandlerProvider
+     */
+    private $handlerProvider;
+
+    public function __construct(RouterInterface $router, HandlerProvider $handlerProvider)
+    {
+        $this->router = $router;
+        $this->handlerProvider = $handlerProvider;
+    }
+
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        $headers = [
-            'Access-Control-Allow-Origin' => '*',
-            'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, FETCH'
-        ];
-        if ($request->getUri()->getPath() === '/' && $request->getMethod() === 'GET') {
-            $response = new JsonResponse(['message' => 'hello world'], 200, $headers);
-        } elseif ($request->getUri()->getPath() === '/message' && $request->getMethod()=== 'POST') {
-            mail(getenv('MAIL_TO'), 'Сообщение с сайта', "ИМЯ: {$_POST['name']} \n Телефон: {$_POST['phone']}");
-            $response = new JsonResponse(['message' => 'message was sent'], 200, $headers);
-        } else {
-            http_response_code(404);
-            $response = new JsonResponse(['message' => 'page not found'], 404, $headers);
-        }
-        return $response;
+        $route = $this->router->handle($request);
+        $handler = $this->handlerProvider->provide($route->getHandler());
+        return $handler->handle($request);
     }
 }

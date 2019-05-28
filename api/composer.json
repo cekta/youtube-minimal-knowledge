@@ -17,6 +17,8 @@
     "zendframework/zend-diactoros": "^2.1",
     "ext-json": "*",
     "zendframework/zend-httphandlerrunner": "^1.1",
-    "smpl/mydi": "^5.0"
+    "smpl/mydi": "^5.0",
+    "psr/http-server-handler": "^1.0",
+    "symfony/routing": "^4.2"
   }
 }
