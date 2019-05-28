@@ -1,0 +1,21 @@
+{
+  "name": "cekta/youtube-minimal-knowledge",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Evgeniy Kuvshinov",
+      "email": "smpl@itmywork.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Cekta\\YoutubeMinimalKnowledge\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "zendframework/zend-diactoros": "^2.1",
+    "ext-json": "*",
+    "zendframework/zend-httphandlerrunner": "^1.1"
+  }
+}
