@@ -4,7 +4,7 @@ class Feedback extends Component {
   submitForm = (event) => {
     event.preventDefault()
     const data = new FormData(event.target)
-    fetch(process.env.REACT_APP_API_URL, {
+    fetch(process.env.REACT_APP_API_URL + '/message', {
       method: 'POST',
       body: data
     })

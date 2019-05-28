@@ -8,6 +8,8 @@ services:
       - ./api:/app
     environment:
       - XDEBUG_CONFIG=idekey=api remote_enable=1 remote_host=${DOCKER_HOST_IP}
+    env_file:
+      - api/.env
     ports:
       - 8000:8000
   web:

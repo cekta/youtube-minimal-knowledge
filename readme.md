@@ -31,3 +31,4 @@
 * Сохранение результатов (ftp, sftp, docker registry, ...)
 * docker multi stage
 * docker registry
+* HTTP

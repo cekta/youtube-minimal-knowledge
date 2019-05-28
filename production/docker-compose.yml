@@ -8,3 +8,5 @@ services:
   api:
     image: cekta/youtube-minimal-knowledge:api
     restart: always
+    env_file:
+      - ../api/.env
