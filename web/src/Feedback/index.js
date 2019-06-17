@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
 class Feedback extends Component {
-  submitForm = (event) => {
-    event.preventDefault()
-    const data = new FormData(event.target)
+    submitForm(e) {
+        e.preventDefault()
+
     fetch(process.env.REACT_APP_API_URL + '/message', {
       method: 'POST',
-      body: data
+            body: new FormData(e.target)
     })
+        .then(res => res.json())
+        .then(res => alert(res.message))
         .catch(err => console.error(err))
   }
 
