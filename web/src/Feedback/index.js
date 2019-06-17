@@ -8,6 +8,7 @@ class Feedback extends Component {
       method: 'POST',
       body: data
     })
+        .catch(err => console.error(err))
   }
 
   render () {
