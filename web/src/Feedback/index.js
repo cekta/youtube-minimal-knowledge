@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import 'materialize-css/dist/css/materialize.min.css'
 
 class Feedback extends Component {
     submitForm(e) {
